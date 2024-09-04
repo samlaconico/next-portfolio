@@ -11,11 +11,17 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        manrope: "var(--font-manrope)",
+        "manrope": "var(--font-manrope)",
         "manrope-bold": "var(--font-manrope-bold)",
+      },
+      colors: {
+        "superfami-green": "#008d45",
+        "superfami-blue": "#0749b4",
+        "superfami-yellow": "#fece15",
+        "superfami-red": "#eb1a1d",
       },
     },
   },

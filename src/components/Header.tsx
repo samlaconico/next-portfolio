@@ -5,6 +5,8 @@ import { useState } from "react";
 
 export function Header() {
   const [center, setCenter] = useState(true);
+  const [nav, openNav] = useState(false);
+
   return (
     <>
       <motion.div
@@ -22,7 +24,7 @@ export function Header() {
           SL
         </motion.div>
         <motion.div transition={{ duration: 0.4, ease: "easeInOut" }} layout>
-          BUTTON
+          <button onClick={() => openNav(!nav)}>BUTTON</button>
         </motion.div>
       </motion.div>
     </>

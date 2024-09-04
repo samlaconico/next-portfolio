@@ -4,19 +4,14 @@ import { motion } from "framer-motion";
 export function Skills() {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, height: "0px", paddingTop: 0, paddingBottom: 0 }}
-        animate={{
-          opacity: 1,
-          height: "100%",
-          paddingTop: "4rem",
-          paddingBottom: "4rem",
-        }}
-        transition={{ duration: 0.5, ease: "easeInOut", delay: .8 }}
-        className="my-16 flex flex-col justify-around gap-4 overflow-hidden rounded-lg border-[1px] bg-neutral-100 text-center font-manrope-bold md:flex-row"
-      >
-        <div className="flex flex-col space-y-8 overflow-hidden">
-          <motion.h1 className="rounded-full bg-green-600 p-3 text-3xl text-white">
+      <motion.div className="my-16 flex flex-col justify-around gap-4 overflow-hidden rounded-lg border-[1px] bg-neutral-100 py-16 text-center font-manrope-bold md:flex-row">
+        <div className="flex flex-col space-y-8 ">
+          <motion.h1
+            initial={{scale:1}}
+            transition={{}}
+            whileHover={{scale:1.1}}
+            className="bg-superfami-green rounded-full p-3 text-3xl text-white drop-shadow-md"
+          >
             FRONTEND
           </motion.h1>
           <SkillCard>React</SkillCard>
@@ -25,7 +20,7 @@ export function Skills() {
           <SkillCard>Tailwind</SkillCard>
         </div>
         <div className="flex flex-col space-y-8 overflow-hidden">
-          <h1 className="rounded-full bg-blue-700 p-3 text-3xl text-white">
+          <h1 className="bg-superfami-blue rounded-full p-3 text-3xl text-white drop-shadow-md">
             BACKEND
           </h1>
           <SkillCard>MySQL</SkillCard>
@@ -34,7 +29,7 @@ export function Skills() {
           <SkillCard>Node.js</SkillCard>
         </div>
         <div className="flex flex-col space-y-8 overflow-hidden">
-          <h1 className="rounded-full bg-yellow-300 p-3 text-3xl text-white">
+          <h1 className="bg-superfami-yellow rounded-full p-3 text-3xl text-white drop-shadow-md">
             DEVELOPMENT
           </h1>
           <SkillCard>C++</SkillCard>
@@ -43,9 +38,10 @@ export function Skills() {
           <SkillCard>Unity</SkillCard>
         </div>
         <div className="flex flex-col space-y-8 overflow-hidden">
-          <h1 className="rounded-full bg-red-500 p-3 text-3xl text-white">
+          <h1 className="bg-superfami-red rounded-full p-3 text-3xl text-white drop-shadow-md">
             TOOLS
           </h1>
+          <SkillCard>VSCode</SkillCard>
           <SkillCard>Github</SkillCard>
           <SkillCard>Photoshop</SkillCard>
         </div>
