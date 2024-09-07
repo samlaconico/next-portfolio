@@ -32,6 +32,7 @@ export function Projects() {
             return (
               <div className="flex justify-start">
                 <Project
+                  key={index}
                   body={data.body}
                   image={data.image}
                   tech={data.tech}
@@ -47,6 +48,7 @@ export function Projects() {
             return (
               <div className="flex justify-end">
                 <Project
+                  key={index}
                   body={data.body}
                   image={data.image}
                   tech={data.tech}
@@ -77,7 +79,7 @@ async function Project({
   if (reversed) {
     return (
       <>
-        <motion.div className="my-8 grid shadow-md h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
+        <motion.div className="my-8 grid h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 shadow-md md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
           <div className="flex flex-col justify-between p-4">
             <div className="">
               <h1 className="text-wrap text-left font-manrope-bold text-3xl">
@@ -86,17 +88,17 @@ async function Project({
               <p className="font-manrope text-lg md:text-xl">{body}</p>
             </div>
 
-            <div className="flex flex-shrink overflow-x-scroll no-scrollbar gap-2">
+            <div className="no-scrollbar flex flex-shrink gap-2 overflow-x-scroll">
               {tech.map((value, index) => {
-                return <Tech color={techColors[index]}>{value}</Tech>;
+                  return <Tech key={index} color={techColors[index]}>{value}</Tech>;
               })}
             </div>
           </div>
           <a href={link}>
-          <img
-            src={image}
-            className="h-full w-full overflow-hidden object-cover"
-          ></img>
+            <img
+              src={image}
+              className="h-full w-full overflow-hidden object-cover"
+            ></img>
           </a>
         </motion.div>
       </>
@@ -104,7 +106,7 @@ async function Project({
   } else {
     return (
       <>
-        <motion.div className="my-8 grid shadow-md h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
+        <motion.div className="my-8 grid h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 shadow-md md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
           <a href={link}>
             <img
               src={image}
@@ -121,7 +123,7 @@ async function Project({
 
             <div className="flex justify-end gap-2">
               {tech.map((value, index) => {
-                return <Tech color={techColors[index]}>{value}</Tech>;
+                return <Tech key={index} color={techColors[index]}>{value}</Tech>;
               })}
             </div>
           </div>
@@ -131,9 +133,11 @@ async function Project({
   }
 }
 
-function Tech({ children, color }: { children: string, color: string }) {
+function Tech({ children, color }: { children: string; color: string }) {
   return (
-    <p className={`w-min rounded-md font-manrope-bold ${color} px-2 text-sm text-white`}>
+    <p
+      className={`w-min rounded-md font-manrope-bold ${color} px-2 text-sm text-white`}
+    >
       {children}
     </p>
   );
