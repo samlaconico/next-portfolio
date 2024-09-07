@@ -16,6 +16,8 @@ const config: Config = {
       fontFamily: {
         "manrope": "var(--font-manrope)",
         "manrope-bold": "var(--font-manrope-bold)",
+        "akshar": "var(--font-akshar)",
+        "akshar-bold": "var(--font-akshar-bold)",
       },
       colors: {
         "superfami-green": "#008d45",

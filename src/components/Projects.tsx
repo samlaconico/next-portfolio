@@ -1,11 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { projects } from "@/data";
 
 type projectProps = {
   children: string;
   image: string;
   body: string;
+  tech: string[];
+  techColors: string[];
+  link: string;
+  reversed: boolean;
 };
 
 export function Projects() {
@@ -15,27 +20,122 @@ export function Projects() {
         initial={{}}
         animate={{}}
         transition={{}}
+        id="projects"
         className="my-16 overflow-hidden"
       >
         <h1 className="text-center font-manrope-bold text-4xl">
           Selected Work
         </h1>
-        <Project body="" image="">
-          Genesis1 Auto Concepts
-        </Project>
+
+        {projects.map((data, index) => {
+          if (index % 2 == 0) {
+            return (
+              <div className="flex justify-start">
+                <Project
+                  body={data.body}
+                  image={data.image}
+                  tech={data.tech}
+                  techColors={data.techColors}
+                  link={data.link}
+                  reversed
+                >
+                  {data.title}
+                </Project>
+              </div>
+            );
+          } else {
+            return (
+              <div className="flex justify-end">
+                <Project
+                  body={data.body}
+                  image={data.image}
+                  tech={data.tech}
+                  techColors={data.techColors}
+                  link={data.link}
+                  reversed={false}
+                >
+                  {data.title}
+                </Project>
+              </div>
+            );
+          }
+        })}
       </motion.div>
     </>
   );
 }
 
-async function Project({ children, image, body }: projectProps) {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+async function Project({
+  children,
+  image,
+  body,
+  tech,
+  techColors,
+  link,
+  reversed,
+}: projectProps) {
+  if (reversed) {
+    return (
+      <>
+        <motion.div className="my-8 grid shadow-md h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
+          <div className="flex flex-col justify-between p-4">
+            <div className="">
+              <h1 className="text-wrap text-left font-manrope-bold text-3xl">
+                {children}
+              </h1>
+              <p className="font-manrope text-lg md:text-xl">{body}</p>
+            </div>
+
+            <div className="flex flex-shrink overflow-x-scroll no-scrollbar gap-2">
+              {tech.map((value, index) => {
+                return <Tech color={techColors[index]}>{value}</Tech>;
+              })}
+            </div>
+          </div>
+          <a href={link}>
+          <img
+            src={image}
+            className="h-full w-full overflow-hidden object-cover"
+          ></img>
+          </a>
+        </motion.div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <motion.div className="my-8 grid shadow-md h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
+          <a href={link}>
+            <img
+              src={image}
+              className="h-full w-full overflow-hidden object-cover"
+            ></img>
+          </a>
+          <div className="flex flex-col justify-between p-4 text-right">
+            <div className="">
+              <h1 className="text-wrap font-manrope-bold text-3xl">
+                {children}
+              </h1>
+              <p className="font-manrope text-xl">{body}</p>
+            </div>
+
+            <div className="flex justify-end gap-2">
+              {tech.map((value, index) => {
+                return <Tech color={techColors[index]}>{value}</Tech>;
+              })}
+            </div>
+          </div>
+        </motion.div>
+      </>
+    );
+  }
+}
+
+function Tech({ children, color }: { children: string, color: string }) {
   return (
-    <>
-      <motion.div className="my-16 w-1/2 overflow-hidden rounded-xl bg-neutral-100">
-        <h1 className="text-nowrap font-manrope-bold text-3xl">{children}</h1>
-      </motion.div>
-    </>
+    <p className={`w-min rounded-md font-manrope-bold ${color} px-2 text-sm text-white`}>
+      {children}
+    </p>
   );
 }
 

@@ -12,8 +12,8 @@ export default function Home() {
     <motion.div
     initial={{height: "0rem"}}
     animate={{height: "100%"}}
-    transition={{delay: 1, duration: 1, ease: "easeOut"}}
-    className="mx-3 md:mx-0 overflow-hidden">
+    transition={{delay: 1, duration: 1, ease: "easeInOut"}}
+    className="overflow-hidden">
       <Hero />
       <About />
       <Skills />
