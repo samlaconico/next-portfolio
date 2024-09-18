@@ -8,6 +8,14 @@ export const projects = [
     link: "https://g1autoconcepts.com/",
   },
   {
+    title: "Genesis 1 Autoconcepts",
+    body: "Commercial small business automobile site, with a Markdown blog. Built using NextJ and Tailwind",
+    image: "images/g1.png",
+    tech: ["NextJS", "TailwindCSS", "Vercel", "Markdown"],
+    techColors: ["bg-superfami-green", "bg-superfami-green", "bg-superfami-blue", "bg-superfami-blue"],
+    link: "https://g1autoconcepts.com/",
+  },
+  {
     title: "Anime Theme Player",
     body: "Lightweight site to search and play a wide range of opening and endings from anime, old and new! Built using the Animethemes.moe API",
     image: "images/anithemes.png",
@@ -15,6 +23,7 @@ export const projects = [
     techColors: ["bg-superfami-green", "bg-superfami-green", "bg-superfami-blue"],
     link: "https://samlaconico.github.io/anithemes/",
   },
+  
 ];
 
 export const about = {
