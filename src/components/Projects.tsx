@@ -30,8 +30,8 @@ export function Projects() {
         {projects.map((data, index) => {
           if (index % 2 == 0) {
             return (
-              <div className="">
-                <div key={index} className="flex justify-start">
+              <div key={index} className="">
+                <div className="flex justify-start">
                   <Project
                     key={index}
                     body={data.body}
@@ -51,8 +51,8 @@ export function Projects() {
             );
           } else {
             return (
-              <div className="">
-                <div key={index} className="flex justify-end">
+              <div key={index} className="">
+                <div className="flex justify-end">
                   <Project
                     key={index}
                     body={data.body}
