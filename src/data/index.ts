@@ -8,12 +8,12 @@ export const projects = [
     link: "https://g1autoconcepts.com/",
   },
   {
-    title: "Genesis 1 Autoconcepts",
-    body: "Commercial small business automobile site, with a Markdown blog. Built using NextJ and Tailwind",
-    image: "images/g1.png",
-    tech: ["NextJS", "TailwindCSS", "Vercel", "Markdown"],
-    techColors: ["bg-superfami-green", "bg-superfami-green", "bg-superfami-blue", "bg-superfami-blue"],
-    link: "https://g1autoconcepts.com/",
+    title: "Titan Energy Cookie",
+    body: "Commercial storefront running on Shopify. Custom theming built with Shopify's templating language Liquid, HTML and CSS",
+    image: "images/cookie.png",
+    tech: ["Liquid", "HTML", "CSS", "Shopify"],
+    techColors: ["bg-superfami-green", "bg-superfami-green", "bg-superfami-green", "bg-superfami-blue"],
+    link: "https://cookie-titan.myshopify.com",
   },
   {
     title: "Anime Theme Player",

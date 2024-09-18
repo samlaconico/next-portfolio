@@ -126,6 +126,9 @@ async function Project({
                 { duration: 0.2 },
               );
             }}
+            onClick={() => {
+              animate(scope.current, {rotate:0, scale: 25}, {duration: 2})
+            }}
             href={link}
           >
             <img
@@ -155,6 +158,9 @@ async function Project({
                 { rotate: 0, scale: 1 },
                 { duration: 0.2 },
               );
+            }}
+            onClick={() => {
+              animate(scope.current, {rotate:0, scale: 25}, {duration: 2})
             }}
             href={link}
           >
