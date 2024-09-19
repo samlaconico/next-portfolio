@@ -94,9 +94,9 @@ async function Project({
         <motion.div className="my-8 grid h-[30rem] w-screen grid-cols-1 grid-rows-2 justify-between overflow-hidden rounded-xl border-[1px] bg-neutral-100 shadow-md md:h-96 md:w-5/6 md:grid-cols-2 md:grid-rows-1">
           <div className="flex flex-col justify-between p-4">
             <div className="">
-              <h1 className="text-wrap text-left font-manrope-bold text-3xl">
+              <a href={link} className="text-wrap text-left font-manrope-bold text-3xl decoration-2 hover:underline">
                 {children}
-              </h1>
+              </a>
               <p className="font-manrope text-lg md:text-xl">{body}</p>
             </div>
 
@@ -171,9 +171,9 @@ async function Project({
           </a>
           <div className="flex flex-col justify-between p-4 text-right">
             <div className="">
-              <h1 className="text-wrap font-manrope-bold text-3xl">
+              <a href={link} className="text-wrap font-manrope-bold text-3xl decoration-2 hover:underline">
                 {children}
-              </h1>
+              </a>
               <p className="font-manrope text-xl">{body}</p>
             </div>
 

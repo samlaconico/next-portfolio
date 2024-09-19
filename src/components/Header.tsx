@@ -31,25 +31,48 @@ export function Header() {
           className="flex"
         >
           <motion.div className="flex gap-4 md:gap-4">
+            <motion.a
+              whileHover={{
+                scale: 1.3,
+                rotate: 3,
+                transition: { duration: 0.2 },
+              }}
+              href="https://github.com/samlaconico"
+            >
+              <TfiGithub className="mt-[.112rem]" />
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.3,
+                rotate: 3,
+                transition: { duration: 0.2 },
+              }}
+              href="https://www.linkedin.com/in/sam-laconico-971b70275/"
+            >
+              <TfiLinkedin />
+            </motion.a>
 
-            <a href="https://github.com/samlaconico">
-              <TfiGithub className="mt-[.112rem]"/>
-            </a>
-            <a href="https://www.linkedin.com/in/sam-laconico-971b70275/">
-            <TfiLinkedin />
-            </a>
-
-            <button
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
               onClick={() => {
                 const element = document.getElementById("projects");
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               <div>PROJECTS</div>
-            </button>
-            <a href="https://drive.google.com/file/d/1Wb-g9G1K0KhZZPGCyh-iiu_UYYB2-l8i/view">
+            </motion.button>
+            <motion.a
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
+              href="https://drive.google.com/file/d/1Wb-g9G1K0KhZZPGCyh-iiu_UYYB2-l8i/view"
+            >
               <div>RESUME</div>
-            </a>
+            </motion.a>
           </motion.div>
         </motion.div>
       </motion.div>

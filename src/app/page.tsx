@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import { Suspense } from "react";
 import { motion } from "framer-motion";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Suspense>
         <Projects/>
       </Suspense>
+      <Contact/>
     </motion.div>
   );
 }
