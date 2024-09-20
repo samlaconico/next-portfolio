@@ -8,13 +8,13 @@ export function About() {
     <>
       <motion.div className="my-16 grid overflow-hidden text-center font-manrope text-2xl">
         <div className="text-balance p-4">
-          {" "}
+          
           <div className="pb-5 font-manrope-bold text-4xl">
             Hi, my name's Sam Laconico! <span className="text-6xl ">&#128075;</span>
-          </div>{" "}
+          </div>
           I am a software engineer/web developer located in the Los Angeles area
           with a B.S of Computer Science from California State University
-          Northridge.{" "}
+          Northridge.
           <div className="pt-5">
             I've got a huge passion for creating and love putting that energy
             into creating websites, apps, and games using my background with
