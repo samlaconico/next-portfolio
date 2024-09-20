@@ -10,7 +10,7 @@ export function About() {
         <div className="text-balance p-4">
           <div className="pb-5 font-manrope-bold text-4xl">
             <h1>
-              Hi, my name's Sam Laconico!{" "}
+              Hi, my name&apos;s Sam Laconico!{" "}
               <span className="text-6xl">&#128075;</span>
             </h1>
           </div>
@@ -21,7 +21,7 @@ export function About() {
           </p>
           <div className="pt-5">
             <p>
-              I've got a huge passion for creating and love putting that energy
+              I&apos;ve got a huge passion for creating and love putting that energy
               into creating websites, apps, and games using my background with
               programming. I love working in teams and collaborating with people
               on projects!
