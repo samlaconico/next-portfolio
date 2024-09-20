@@ -10,7 +10,7 @@ export function About() {
         <div className="text-balance p-4">
           {" "}
           <div className="pb-5 font-manrope-bold text-4xl">
-            Hi, my name's Sam Laconico! <span className="text-6xl ">👋</span>
+            Hi, my name's Sam Laconico! <span className="text-6xl ">&#128075;</span>
           </div>{" "}
           I am a software engineer/web developer located in the Los Angeles area
           with a B.S of Computer Science from California State University
