@@ -1,6 +1,11 @@
 "use client";
 
 import { motion, stagger, useAnimate } from "framer-motion";
+import { TfiLinkedin } from "react-icons/tfi";
+import { TfiGithub } from "react-icons/tfi";
+import { RiLinkedinBoxFill } from "react-icons/ri";
+import { RiGithubFill } from "react-icons/ri";
+import { RiMailLine } from "react-icons/ri";
 
 export function Hero() {
   const [scope, animate] = useAnimate();
@@ -18,6 +23,39 @@ export function Hero() {
           <h2 className="font-akshar text-2xl md:text-4xl">
             Creative. Programmer. Designer
           </h2>
+
+          <div className="flex gap-4 pt-2 text-4xl">
+            <motion.a
+              whileHover={{
+                scale: 1.3,
+                rotate: 3,
+                transition: { duration: 0.2 },
+              }}
+              href="https://github.com/samlaconico"
+            >
+              <RiGithubFill/>
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.3,
+                rotate: 3,
+                transition: { duration: 0.2 },
+              }}
+              href="https://www.linkedin.com/in/sam-laconico-971b70275/"
+            >
+              <RiLinkedinBoxFill />
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.3,
+                rotate: 3,
+                transition: { duration: 0.2 },
+              }}
+              href="https://github.com/samlaconico"
+            >
+              <RiMailLine/>
+            </motion.a>
+          </div>
         </div>
         <div>
           <img

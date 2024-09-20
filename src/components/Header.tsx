@@ -31,27 +31,6 @@ export function Header() {
           className="flex"
         >
           <motion.div className="flex gap-4 md:gap-4">
-            <motion.a
-              whileHover={{
-                scale: 1.3,
-                rotate: 3,
-                transition: { duration: 0.2 },
-              }}
-              href="https://github.com/samlaconico"
-            >
-              <TfiGithub className="mt-[.112rem]" />
-            </motion.a>
-            <motion.a
-              whileHover={{
-                scale: 1.3,
-                rotate: 3,
-                transition: { duration: 0.2 },
-              }}
-              href="https://www.linkedin.com/in/sam-laconico-971b70275/"
-            >
-              <TfiLinkedin />
-            </motion.a>
-
             <motion.button
               whileHover={{
                 scale: 1.1,
@@ -69,7 +48,7 @@ export function Header() {
                 scale: 1.1,
                 transition: { duration: 0.2 },
               }}
-              href="https://drive.google.com/file/d/1Wb-g9G1K0KhZZPGCyh-iiu_UYYB2-l8i/view"
+              href="https://drive.google.com/file/d/1-t3FvoMWM3tueqA1IRQfoU8ypb4qxAkx/view?usp=sharing"
             >
               <div>RESUME</div>
             </motion.a>

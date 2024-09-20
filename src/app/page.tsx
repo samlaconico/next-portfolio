@@ -21,7 +21,7 @@ export default function Home() {
       <Suspense>
         <Projects/>
       </Suspense>
-      <Contact/>
+      
     </motion.div>
   );
 }
