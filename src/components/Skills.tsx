@@ -76,7 +76,7 @@ export function Skills() {
 function SkillCard({ children }: { children: string }) {
   return (
     <>
-      <h1 className="font-manrope text-xl">{children}</h1>
+      <h1 className="font-manrope-bold text-xl">{children}</h1>
     </>
   );
 }

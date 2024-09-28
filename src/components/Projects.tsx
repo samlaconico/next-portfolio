@@ -130,7 +130,6 @@ async function Project({
               );
             }}
             onClick={() => {
-              animate(scope.current, { rotate: 0, scale: 25 }, { duration: 2 });
             }}
             href={link}
           >
@@ -163,7 +162,6 @@ async function Project({
               );
             }}
             onClick={() => {
-              animate(scope.current, { rotate: 0, scale: 25 }, { duration: 2 });
             }}
             href={link}
           >

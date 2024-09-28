@@ -6,7 +6,7 @@ import { about } from "@/data";
 export function About() {
   return (
     <>
-      <motion.div className="my-16 grid overflow-hidden text-center font-manrope text-2xl">
+      <motion.div className="my-16  grid-flow-row grid-rows-2 overflow-hidden text-center font-manrope text-2xl md:grid-flow-col md:grid-cols-2 md:grid-rows-none">
         <div className="text-balance p-4">
           <div className="pb-5 font-manrope-bold text-4xl">
             <h1>
@@ -21,15 +21,15 @@ export function About() {
           </p>
           <div className="pt-5">
             <p>
-              I&apos;ve got a huge passion for creating and love putting that energy
-              into creating websites, apps, and games using my background with
-              programming. I love working in teams and collaborating with people
-              on projects!
+              I&apos;ve got a huge passion for creating and love putting that
+              energy into creating websites, apps, and games using my background
+              with programming. I love working in teams and collaborating with
+              people on projects!
             </p>
           </div>
         </div>
 
-        <div className="text-balance p-4"></div>
+        
       </motion.div>
     </>
   );
